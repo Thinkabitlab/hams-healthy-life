@@ -286,30 +286,90 @@ body {
 }
 
 /* =========================================
-   7. APP 下載區（預留按鈕）
+   7. APP 下載區卡片
    ========================================= */
-.app-buttons {
+.download-card {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8fafc; /* 與上方學習單相同的淺灰底色 */
+    border: 1px solid #e2e8f0; /* 統一加上細邊框，取消厚重陰影 */
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 10px;
+    gap: 20px;
 }
 
-.app-btn {
-    width: 100%;
-    padding: 16px;
-    border-radius: 30px;
-    font-size: 1rem;
+.download-info {
+    flex: 1;
+}
+
+.download-title {
+    font-size: 1.15rem;
     font-weight: 700;
-    border: none;
-    text-align: center;
-    transition: 0.2s;
+    color: #152548; /* 使用網站主標題色 */
+    margin-bottom: 8px;
 }
 
-.app-btn.coming-soon {
-    background-color: #e2e8f0;
-    color: #64748b;
-    cursor: not-allowed;
+.download-desc {
+    font-size: 0.95rem;
+    color: #475569; /* 使用網站次要文字色 */
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
+/* 仿 Apple 官方風格的下載按鈕 */
+.btn-app-store {
+    display: inline-flex;
+    align-items: center;
+    background-color: #152548; /* 改為你的品牌深藍色，更有一體感 */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-app-store:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(21, 37, 72, 0.3);
+}
+
+.btn-app-store .icon {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.btn-app-store .btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn-app-store .btn-text small {
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+.btn-app-store .btn-text strong {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+/* 右側 QR Code 區 */
+.download-qrcode {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.download-qrcode img {
+    width: 150px;
+    height: 150px;
+    display: block;
+}
 /* =========================================
    8. 頁尾 (Footer) - 微想實驗室完整資訊
    ========================================= */
@@ -376,5 +436,16 @@ body {
     .modal-arrow {
         padding: 8px 12px;
         font-size: 1.2rem;
+    }
+
+        .download-card {
+        flex-direction: column-reverse; /* QR code 在上，文字按鈕在下 */
+        text-align: center;
+        padding: 25px 20px;
+    }
+    
+    .btn-app-store {
+        width: 100%; /* 手機版讓按鈕滿版寬 */
+        justify-content: center;
     }
 }
