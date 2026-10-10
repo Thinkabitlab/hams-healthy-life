@@ -115,6 +115,27 @@ body {
 }
 
 /* =========================================
+   4.5 專案宣傳影片 (16:9 響應式)
+   ========================================= */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* =========================================
    5. 施測紀錄相片集 (橫向滑動輪播 + 大圖彈窗)
    ========================================= */
 .gallery-slider-wrapper {
@@ -370,6 +391,17 @@ body {
     height: 150px;
     display: block;
 }
+/* =========================================
+   7.5 製作團隊照片
+   ========================================= */
+.team-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
 /* =========================================
    8. 頁尾 (Footer) - 微想實驗室完整資訊
    ========================================= */
